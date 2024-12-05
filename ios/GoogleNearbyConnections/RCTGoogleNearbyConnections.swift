@@ -10,6 +10,8 @@ import NearbyConnections
 
 @objc public class GoogleNearbyConnectionsWrapper: RCTEventEmitter {
   private var connectionManager: ConnectionManager?
+  private var discoverer: Discoverer?
+  private var advertiser: Advertiser?
 
   @objc public override init() {
     super.init()
@@ -33,6 +35,28 @@ import NearbyConnections
     }
     
     self.connectionManager?.delegate = self
+    
+    self.discoverer = Discoverer(connectionManager: self.connectionManager!)
+    self.discoverer?.delegate = self
+    
+    self.advertiser = Advertiser(connectionManager: self.connectionManager!)
+    self.advertiser?.delegate = self
+  }
+  
+  @objc public func startDiscovery() {
+    self.discoverer?.startDiscovery()
+  }
+  
+  @objc public func stopDiscovery() {
+    self.discoverer?.stopDiscovery()
+  }
+
+  @objc public func startAdvertising(identifier: String) {
+    self.advertiser?.startAdvertising(using: identifier.data(using: .utf8)!)
+  }
+  
+  @objc public func stopAdvertising() {
+    self.advertiser?.stopAdvertising()
   }
   
   @objc public override static func requiresMainQueueSetup() -> Bool {
@@ -113,5 +137,29 @@ extension GoogleNearbyConnectionsWrapper: ConnectionManagerDelegate {
       sendEvent(withName: "rejected", body: ["endpointID": endpointID])
       break
     }
+  }
+}
+
+extension GoogleNearbyConnectionsWrapper: DiscovererDelegate {
+  public func discoverer(
+    _ discoverer: Discoverer, didFind endpointID: EndpointID, with context: Data) {
+    // An endpoint was found.
+    sendEvent(withName: "endpointFound", body: ["endpointID": endpointID])
+  }
+
+  public func discoverer(_ discoverer: Discoverer, didLose endpointID: EndpointID) {
+    // A previously discovered endpoint has gone away.
+    sendEvent(withName: "endpointLost", body: ["endpointID": endpointID])
+  }
+}
+
+extension GoogleNearbyConnectionsWrapper: AdvertiserDelegate {
+  public func advertiser(
+    _ advertiser: Advertiser, didReceiveConnectionRequestFrom endpointID: EndpointID,
+    with context: Data, connectionRequestHandler: @escaping (Bool) -> Void) {
+    // Accept or reject any incoming connection requests. The connection will still need to
+    // be verified in the connection manager delegate.
+    sendEvent(withName: "connectionRequest", body: ["endpointID": endpointID])
+    connectionRequestHandler(true)
   }
 }

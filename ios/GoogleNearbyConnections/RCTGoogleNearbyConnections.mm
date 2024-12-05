@@ -34,6 +34,32 @@ RCT_EXPORT_METHOD(initConnectionManager:(NSString *)serviceId
     [swiftWrapper initConnectionManagerWithServiceId:serviceId strategy:strategy];
 }
 
+// Expose the startDiscovery method
+RCT_EXPORT_METHOD(startDiscovery)
+{
+  GoogleNearbyConnectionsWrapper *wrapperInstance = [[GoogleNearbyConnectionsWrapper alloc] init];
+  [wrapperInstance startDiscovery];
+}
 
+// Expose the stopDiscovery method
+RCT_EXPORT_METHOD(stopDiscovery)
+{
+  GoogleNearbyConnectionsWrapper *wrapperInstance = [[GoogleNearbyConnectionsWrapper alloc] init];
+  [wrapperInstance stopDiscovery];
+}
+
+// Expose the startAdvertising method with a string parameter
+RCT_EXPORT_METHOD(startAdvertising:(NSString *)identifier)
+{
+  GoogleNearbyConnectionsWrapper *wrapperInstance = [[GoogleNearbyConnectionsWrapper alloc] init];
+  [wrapperInstance startAdvertisingWithIdentifier:identifier];  // Ensure Swift method accepts NSString
+}
+
+// Expose the stopAdvertising method
+RCT_EXPORT_METHOD(stopAdvertising)
+{
+  GoogleNearbyConnectionsWrapper *wrapperInstance = [[GoogleNearbyConnectionsWrapper alloc] init];
+  [wrapperInstance stopAdvertising];
+}
 
 @end
