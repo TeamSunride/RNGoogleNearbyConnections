@@ -8,6 +8,8 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  NativeEventEmitter,
+  NativeModules,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -27,9 +29,10 @@ import {
 
 import RNGoogleNearbyConnections from './specs/RNGoogleNearbyConnections';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+const GoogleNearbyConnections = NativeModules.GoogleNearbyConnectionsWrapper;
+const nearbyConnections = new NativeEventEmitter(GoogleNearbyConnections);
+
+GoogleNearbyConnections.initConnectionManager("org.reactjs.native.sunride.--PRODUCT-NAME-rfc1034identifier-", "cluster");
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
