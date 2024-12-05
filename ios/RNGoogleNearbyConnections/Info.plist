@@ -31,6 +31,14 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Connect to other devices</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_354244A96566._tcp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Connect to other devices</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
