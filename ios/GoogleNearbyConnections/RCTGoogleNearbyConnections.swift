@@ -68,7 +68,7 @@ import NearbyConnections
   }
   
   @objc public override func supportedEvents() -> [String]! {
-      return ["connectionVerificationRequest", "payloadReceived", "payloadStatusUpdate", "connecting", "connected", "disconnected", "rejected"]
+      return ["connectionVerificationRequest", "payloadReceived", "payloadStatusUpdate", "connecting", "connected", "disconnected", "rejected", "endpointFound", "endpointLost", "connectionRequest"]
   }
 }
 
