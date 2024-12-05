@@ -15,7 +15,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		B42D6ED72D00FDBD00E788C9 /* NearbyConnectionsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B42D6ED62D00FDBD00E788C9 /* NearbyConnectionsDynamic */; };
 		B42D6EE02D01B01700E788C9 /* RCTGoogleNearbyConnections.mm in Sources */ = {isa = PBXBuildFile; fileRef = B42D6EDF2D01B01700E788C9 /* RCTGoogleNearbyConnections.mm */; };
 		B42D6EE32D01C42400E788C9 /* RCTGoogleNearbyConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D6EE22D01C42400E788C9 /* RCTGoogleNearbyConnections.swift */; };
 		B42D6EE72D01EC9700E788C9 /* NearbyConnections in Frameworks */ = {isa = PBXBuildFile; productRef = B42D6EE62D01EC9700E788C9 /* NearbyConnections */; };
@@ -70,7 +69,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42D6ED72D00FDBD00E788C9 /* NearbyConnectionsDynamic in Frameworks */,
 				B42D6EE72D01EC9700E788C9 /* NearbyConnections in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-RNGoogleNearbyConnections.a in Frameworks */,
 			);
@@ -501,6 +499,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6US2DVSS95;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/hermes-engine/destroot/Library/Frameworks/universal\"",
+					"\"$(BUILT_PRODUCTS_DIR)/PackageFrameworks\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built\"",
+				);
 				INFOPLIST_FILE = RNGoogleNearbyConnections/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -539,6 +543,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6US2DVSS95;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/hermes-engine/destroot/Library/Frameworks/universal\"",
+					"\"$(BUILT_PRODUCTS_DIR)/PackageFrameworks\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built\"",
+				);
 				INFOPLIST_FILE = RNGoogleNearbyConnections/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -758,11 +768,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B42D6ED62D00FDBD00E788C9 /* NearbyConnectionsDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B42D6ED32D00FDBD00E788C9 /* XCRemoteSwiftPackageReference "nearby" */;
-			productName = NearbyConnectionsDynamic;
-		};
 		B42D6EE62D01EC9700E788C9 /* NearbyConnections */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B42D6ED32D00FDBD00E788C9 /* XCRemoteSwiftPackageReference "nearby" */;
