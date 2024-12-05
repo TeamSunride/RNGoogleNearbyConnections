@@ -15,6 +15,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B42D6ED72D00FDBD00E788C9 /* NearbyConnectionsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = B42D6ED62D00FDBD00E788C9 /* NearbyConnectionsDynamic */; };
+		B42D6EE02D01B01700E788C9 /* RCTGoogleNearbyConnections.mm in Sources */ = {isa = PBXBuildFile; fileRef = B42D6EDF2D01B01700E788C9 /* RCTGoogleNearbyConnections.mm */; };
+		B42D6EE32D01C42400E788C9 /* RCTGoogleNearbyConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42D6EE22D01C42400E788C9 /* RCTGoogleNearbyConnections.swift */; };
+		B42D6EE72D01EC9700E788C9 /* NearbyConnections in Frameworks */ = {isa = PBXBuildFile; productRef = B42D6EE62D01EC9700E788C9 /* NearbyConnections */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,11 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-RNGoogleNearbyConnections.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNGoogleNearbyConnections.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNGoogleNearbyConnections/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests.release.xcconfig"; path = "Target Support Files/Pods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests/Pods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests.release.xcconfig"; sourceTree = "<group>"; };
+		B42D6EDE2D01B01700E788C9 /* RCTGoogleNearbyConnections.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTGoogleNearbyConnections.h; sourceTree = "<group>"; };
+		B42D6EDF2D01B01700E788C9 /* RCTGoogleNearbyConnections.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTGoogleNearbyConnections.mm; sourceTree = "<group>"; };
+		B42D6EE12D01C42300E788C9 /* RNGoogleNearbyConnections-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNGoogleNearbyConnections-Bridging-Header.h"; sourceTree = "<group>"; };
+		B42D6EE22D01C42400E788C9 /* RCTGoogleNearbyConnections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTGoogleNearbyConnections.swift; sourceTree = "<group>"; };
+		B42D6EE42D01E63700E788C9 /* libswiftCore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCore.tbd; path = usr/lib/swift/libswiftCore.tbd; sourceTree = SDKROOT; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -61,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42D6ED72D00FDBD00E788C9 /* NearbyConnectionsDynamic in Frameworks */,
+				B42D6EE72D01EC9700E788C9 /* NearbyConnections in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-RNGoogleNearbyConnections.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +113,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B42D6EE42D01E63700E788C9 /* libswiftCore.tbd */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-RNGoogleNearbyConnections.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNGoogleNearbyConnections-RNGoogleNearbyConnectionsTests.a */,
@@ -119,6 +131,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				B42D6EDD2D01AFD300E788C9 /* GoogleNearbyConnections */,
 				13B07FAE1A68108700A75B9A /* RNGoogleNearbyConnections */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNGoogleNearbyConnectionsTests */,
@@ -138,6 +151,17 @@
 				00E356EE1AD99517003FC87E /* RNGoogleNearbyConnectionsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B42D6EDD2D01AFD300E788C9 /* GoogleNearbyConnections */ = {
+			isa = PBXGroup;
+			children = (
+				B42D6EDE2D01B01700E788C9 /* RCTGoogleNearbyConnections.h */,
+				B42D6EDF2D01B01700E788C9 /* RCTGoogleNearbyConnections.mm */,
+				B42D6EE22D01C42400E788C9 /* RCTGoogleNearbyConnections.swift */,
+				B42D6EE12D01C42300E788C9 /* RNGoogleNearbyConnections-Bridging-Header.h */,
+			);
+			path = GoogleNearbyConnections;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -209,7 +233,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1610;
 					};
 				};
 			};
@@ -222,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				B42D6ED32D00FDBD00E788C9 /* XCRemoteSwiftPackageReference "nearby" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,7 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42D6EE02D01B01700E788C9 /* RCTGoogleNearbyConnections.mm in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				B42D6EE32D01C42400E788C9 /* RCTGoogleNearbyConnections.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6US2DVSS95;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = RNGoogleNearbyConnections/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -477,16 +507,26 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.sunride.--PRODUCT-NAME-rfc1034identifier-";
 				PRODUCT_NAME = RNGoogleNearbyConnections;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleNearbyConnections/RNGoogleNearbyConnections-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -498,11 +538,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6US2DVSS95;
 				INFOPLIST_FILE = RNGoogleNearbyConnections/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
@@ -510,9 +555,15 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.sunride.--PRODUCT-NAME-rfc1034identifier-";
 				PRODUCT_NAME = RNGoogleNearbyConnections;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleNearbyConnections/RNGoogleNearbyConnections-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -586,10 +637,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -658,10 +706,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -700,6 +745,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B42D6ED32D00FDBD00E788C9 /* XCRemoteSwiftPackageReference "nearby" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/nearby.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B42D6ED62D00FDBD00E788C9 /* NearbyConnectionsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B42D6ED32D00FDBD00E788C9 /* XCRemoteSwiftPackageReference "nearby" */;
+			productName = NearbyConnectionsDynamic;
+		};
+		B42D6EE62D01EC9700E788C9 /* NearbyConnections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B42D6ED32D00FDBD00E788C9 /* XCRemoteSwiftPackageReference "nearby" */;
+			productName = NearbyConnections;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
